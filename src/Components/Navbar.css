@@ -31,6 +31,7 @@
 @media screen and (max-width: 600px) {
   .nav-icons {
     display: flex;
+    color: white;
   }
   .nav-links {
     display: flex;
