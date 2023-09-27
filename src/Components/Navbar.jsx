@@ -5,6 +5,7 @@ import { FiMenu, FiX } from "react-icons/fi";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
+  const closeMenu = ()=>setOpen(false)
   return (
     <nav className="navbar">
       <Link to="/" className="nav-logo">
@@ -16,16 +17,16 @@ function Navbar() {
 
       <ul className={open ? 'nav-links active' : 'nav-links'}>
         <li>
-          <Link className="nav-link">Home</Link>
+          <Link onClick={closeMenu} className="nav-link">Home</Link>
         </li>
         <li>
-          <Link className="nav-link">About</Link>
+          <Link onClick={closeMenu} className="nav-link">About</Link>
         </li>
         <li>
-          <Link className="nav-link">Contact</Link>
+          <Link onClick={closeMenu} className="nav-link">Contact</Link>
         </li>
         <li>
-          <Link className="nav-link">Shop</Link>
+          <Link onClick={closeMenu} className="nav-link">Shop</Link>
         </li>
       </ul>
     </nav>
